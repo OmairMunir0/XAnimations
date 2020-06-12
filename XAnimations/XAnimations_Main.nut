@@ -6,8 +6,8 @@
 // Load the required files
 {
 	local
-		dir	= "XAnimations/",
-		ext	= ".nut",
+		dir = "XAnimations/",
+		ext = ".nut",
 		files = ["XAnimations_Utils", "XAnimations_Info"];
 	
 	foreach(file in files) {
