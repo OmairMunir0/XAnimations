@@ -4,7 +4,7 @@
  * @desc Demo
  */
 
-decUIEnabled <- true;
+decUIEnabled <- false;
 
 function Script::ScriptLoad() {
 	Script.LoadScript("XAnimations/XAnimations_Main.nut");
@@ -12,7 +12,7 @@ function Script::ScriptLoad() {
 	local
 		showOpenDemo = true,
 		showCloseDemo = false,
-		showFadeInDemo = true,
+		showFadeInDemo = false,
 		showFadeOutDemo = false,
 		decUIShowOpenDemo = false,
 		decUIShowCloseDemo = false;
