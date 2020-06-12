@@ -1,3 +1,9 @@
+/**
+ * @file main.nut
+ * @author [VU]Xmair
+ * @desc Demo
+ */
+
 decUIEnabled <- true;
 
 function Script::ScriptLoad() {
@@ -5,11 +11,11 @@ function Script::ScriptLoad() {
 
 	local
 		showOpenDemo = true,
-		showCloseDemo = true,
+		showCloseDemo = false,
 		showFadeInDemo = true,
-		showFadeOutDemo = true,
-		decUIShowOpenDemo = true,
-		decUIShowCloseDemo = true;
+		showFadeOutDemo = false,
+		decUIShowOpenDemo = false,
+		decUIShowCloseDemo = false;
 
 	if (decUIEnabled) {
 		Script.LoadScript("decui/decui.nut");
