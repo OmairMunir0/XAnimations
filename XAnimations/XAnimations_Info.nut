@@ -45,7 +45,7 @@ class SqAnimationInfo {
 	}
 	
 	/**
-	 * @returns [string]: element type
+	 * @returns [string/null]: element type
 	 */
 	function getElementType() {
 		return this.elementType;

@@ -18,7 +18,7 @@
 // Attach custom properties to the elements
 {
 	/**
-	 * @desc Attach custom properties to existing instances
+	 * @desc Attach custom properties to existing GUIElements
 	 * @params
 	   * @required [properties|array]: An array containing custom properties to be attached
 	   
@@ -44,7 +44,7 @@ class SqAnimations {
 	/**
 	 * @desc Add an element for animation processing
 	 * @params
-	   * @required [element|string/instance]: string in case of decUI element, instance otherwise
+	   * @required [element|string/GUIElement]: string in case of decUI element, GUIElement otherwise
 	   * @required [elementAnimationType|integer]: any animation type from SqAnimationType
 	   * @required [elementAnimationInfo|table]: animation info
 	   * @optional [elementType|string]: only required if the element is a decUI element
@@ -54,7 +54,7 @@ class SqAnimations {
     static function addElement(element, elementAnimationType, elementAnimationInfo, elementType = null) {
 		// Checking if we have a custom [onFinish] event
 		if (elementAnimationInfo.rawin("onFinish") && typeof(elementAnimationInfo.onFinish) == "function") {
-			// If we element specified was an instance
+			// If we element specified was a GUIElement
 			if (element instanceof GUIElement) {
 				// We set the element's custom event to the one the user has specified
 				element.onAnimationFinish = elementAnimationInfo.onFinish;
@@ -84,7 +84,7 @@ class SqAnimations {
 	/**
 	 * @desc Check if an element has animations being applied
 	 * @params
-	   * @required [element|string/instance]: string in case of decUI element, instance otherwise
+	   * @required [element|string/GUIElement]: string in case of decUI element, GUIElement otherwise
 	   
 	 * @returns [boolean]: true if element exists, false if not
 	 */
@@ -110,7 +110,7 @@ class SqAnimations {
 	/**
 	 * @desc Remove an element from animation processing
 	 * @params
-	   * @required [element|string/instance]: string in case of decUI element, instance otherwise
+	   * @required [element|string/GUIElement]: string in case of decUI element, GUIElement otherwise
 	   
 	 * @returns [null]
 	 */
@@ -298,7 +298,7 @@ class SqAnimations {
 	/**
 	 * @desc Inner event that is called when an animation is finished
 	 * @params
-	   * @required [element|instance]: element instance
+	   * @required [element|GUIElement]: element instance
 	   * @required [elementAnimationType|integer]: animation type from the SqAnimationType enumeration
 	   * @required [elementAnimationInfo|table]: animation info
 	   
